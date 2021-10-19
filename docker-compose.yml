@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  test_back:
+    image: postgres
+    container_name: test-back_database
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=test_back
+    volumes:
+      - pgdata:/data/postgres
+volumes:
+  pgdata:
+    driver: local
