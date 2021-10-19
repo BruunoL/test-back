@@ -14,14 +14,15 @@ class CreateNftUseCase {
     private nftsRepository: INftsRepository
   ) { }
 
-  async execute({ qtd_nfts, asset_id }: IRequest): Promise<Nft> {
+  async execute({ qtd_nfts, asset_id }: IRequest): Promise<Nft[]> {
+    let nft;
     for (let i = 1; i <= qtd_nfts; i++) {
-      const nft = await this.nftsRepository.create({
+      nft = await this.nftsRepository.create({
         qtd_nfts,
         asset_id,
       });
-      return nft;
     }
+    return nft;
   }
 }
 

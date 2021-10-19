@@ -14,8 +14,6 @@ class CreateAssetController {
       image,
     });
 
-    console.log(asset);
-
     return response.status(201).json(asset);
   }
 }
