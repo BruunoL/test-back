@@ -78,3 +78,11 @@ API desenvolvida para criação de NFt's consumindo a API do Pinata.
 - Configurar as credenciais do banco no arquivo ormconfig.json.
 
 - Execute yarn typeorm migrate:run - Subir as migrations
+
+## Tecnologias utilizadas
+
+- NodeJS(Typescript + express)
+- TypeORM(banco postgress)
+- Jest(testes unitários)
+- jsonwebtoken(gerar tokens JWT)
+- Axios(consumir as requisições externas na API)
